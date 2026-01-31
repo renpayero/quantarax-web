@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { HiMail, HiPhone, HiLocationMarker, HiCheckCircle, HiExclamationCircle } from "react-icons/hi";
-import { FaLinkedinIn, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedinIn, FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const contactInfo = [
   {
@@ -27,8 +27,8 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: FaLinkedinIn, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: FaInstagram, href: "https://instagram.com", label: "Instagram" },
+  { icon: FaLinkedinIn, href: "https://ar.linkedin.com/in/administracion-quantarax-12254a39b", label: "LinkedIn" },
+  { icon: FaInstagram, href: "https://www.instagram.com/quantarax_?igsh=MTIzb3F2MHBtN2dkYw%3D%3D", label: "Instagram" },
   { icon: FaWhatsapp, href: "https://wa.me/5493412709415", label: "WhatsApp" },
 ];
 

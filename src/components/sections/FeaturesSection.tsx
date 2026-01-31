@@ -78,6 +78,7 @@ export default function FeaturesSection() {
                     alt={feature.title}
                     fill
                     className="object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   {/* Internal colored glow */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-20 mix-blend-overlay group-hover:opacity-40 transition-opacity duration-500`} />

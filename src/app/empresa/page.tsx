@@ -30,29 +30,29 @@ const values = [
 
 const timeline = [
   {
-    year: "2020",
-    title: "El Inicio",
-    description: "Identificamos una necesidad crítica: las empresas necesitaban un asesor neutral en compras IT.",
-  },
-  {
-    year: "2021",
-    title: "Primeros Clientes",
-    description: "Comenzamos a trabajar con empresas locales, demostrando ahorros certificados del 10% o más.",
-  },
-  {
     year: "2022",
-    title: "Expansión Regional",
-    description: "Ampliamos nuestros servicios a toda Argentina, incorporando consultoría extendida.",
+    title: "El Inicio",
+    description: "Identificamos una necesidad crítica: las empresas necesitaban un asesor neutral en compras IT. Nacimiento de QuantaraX.",
   },
   {
     year: "2023",
-    title: "Quantum Education",
-    description: "Lanzamos nuestro programa de capacitación para equipos de compras IT.",
+    title: "Primeros Clientes",
+    description: "Comenzamos a trabajar con empresas locales, demostrando ahorros certificados del 10% o más en sus adquisiciones.",
   },
   {
     year: "2024",
-    title: "Crecimiento Sostenido",
-    description: "Más de 500 horas ganadas al año por cliente y un NPS superior al 95%.",
+    title: "Expansión Regional y Educación",
+    description: "Ampliamos nuestros servicios a toda Argentina y lanzamos Quantum Education para capacitar equipos de compras.",
+  },
+  {
+    year: "2025",
+    title: "Consolidación",
+    description: "Alcanzamos hitos récord de ahorro y optimización para nuestros clientes corporativos.",
+  },
+  {
+    year: "2026",
+    title: "Innovación Continua",
+    description: "Proyectamos nuevas herramientas tecnológicas y métricas avanzadas para la toma de decisiones IT.",
   },
 ];
 
@@ -284,6 +284,7 @@ export default function EmpresaPage() {
                       alt={member.name}
                       fill
                       className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
                     />
                   </div>
                 </div>

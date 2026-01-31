@@ -26,9 +26,9 @@ export default function Navbar() {
 
   return (
     <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-dark-950/80 backdrop-blur-lg border-b border-glass-border"
@@ -42,19 +42,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="relative"
-            >
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Q</span>
-              </div>
-              <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
-            </motion.div>
-            <span className="text-xl font-bold text-foreground">
-              Quantara<span className="text-primary-400">X</span>
+            <span className="text-2xl font-bold text-foreground">
+              <span className="text-primary text-4xl">Q</span>uantaraX
             </span>
           </Link>
+
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">

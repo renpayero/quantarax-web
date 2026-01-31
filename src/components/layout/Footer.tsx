@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebookF, FaLinkedinIn, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedinIn, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 
 const footerLinks = {
@@ -20,9 +20,8 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: FaLinkedinIn, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: FaInstagram, href: "https://instagram.com", label: "Instagram" },
-  { icon: FaFacebookF, href: "https://facebook.com", label: "Facebook" },
+  { icon: FaLinkedinIn, href: "https://ar.linkedin.com/in/administracion-quantarax-12254a39b", label: "LinkedIn" },
+  { icon: FaInstagram, href: "https://www.instagram.com/quantarax_?igsh=MTIzb3F2MHBtN2dkYw%3D%3D", label: "Instagram" },
   { icon: FaWhatsapp, href: "https://wa.me/5493412709415", label: "WhatsApp" },
 ];
 
@@ -38,12 +37,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Q</span>
-              </div>
-              <span className="text-xl font-bold text-foreground">
-                Quantara<span className="text-primary-400">X</span>
+            <Link href="/" className="inline-block mb-4">
+              <span className="text-2xl font-bold text-foreground">
+                <span className="text-primary text-4xl">Q</span>uantaraX
               </span>
             </Link>
             <p className="text-foreground-muted text-sm leading-relaxed mb-6">
@@ -69,7 +65,7 @@ export default function Footer() {
 
           {/* Servicios */}
           <div>
-            <h4 className="text-foreground font-semibold mb-4">Servicios</h4>
+            <h4 className="text-foreground font-semibold mb-4 pt-4">Servicios</h4>
             <ul className="space-y-3">
               {footerLinks.servicios.map((link) => (
                 <li key={link.href}>
@@ -86,7 +82,7 @@ export default function Footer() {
 
           {/* Empresa */}
           <div>
-            <h4 className="text-foreground font-semibold mb-4">Empresa</h4>
+            <h4 className="text-foreground font-semibold mb-4 pt-4">Empresa</h4>
             <ul className="space-y-3">
               {footerLinks.empresa.map((link) => (
                 <li key={link.href}>
@@ -103,7 +99,7 @@ export default function Footer() {
 
           {/* Contacto */}
           <div>
-            <h4 className="text-foreground font-semibold mb-4">Contacto</h4>
+            <h4 className="text-foreground font-semibold mb-4 pt-4">Contacto</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <HiLocationMarker className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
@@ -135,7 +131,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-glass-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4" style={{ borderColor: "rgba(148, 163, 184, 0.1)" }}>
-          <p className="text-foreground-muted text-sm">
+          <p className="text-foreground-muted text-sm mb-4">
             © {currentYear} QuantaraX. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
@@ -143,7 +139,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-foreground-muted hover:text-foreground transition-colors text-sm"
+                className="text-foreground-muted hover:text-foreground transition-colors text-sm mb-4"
               >
                 {link.label}
               </Link>

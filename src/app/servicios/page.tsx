@@ -144,6 +144,7 @@ export default function ServiciosPage() {
                       alt={service.title}
                       fill
                       className="object-contain p-2 lg:p-4"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                     />
                     {/* Subtle Glow Effect */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-5 mix-blend-overlay pointer-events-none`} />
