@@ -73,8 +73,20 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
   --color-primary: var(--primary-500);
   --color-accent: var(--accent-500);
+  --color-dark-50: var(--dark-50);
+  --color-dark-100: var(--dark-100);
+  --color-dark-200: var(--dark-200);
+  --color-dark-300: var(--dark-300);
+  --color-dark-400: var(--dark-400);
+  --color-dark-500: var(--dark-500);
+  --color-dark-600: var(--dark-600);
+  --color-dark-700: var(--dark-700);
+  --color-dark-800: var(--dark-800);
+  --color-dark-900: var(--dark-900);
+  --color-dark-950: var(--dark-950);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -278,7 +290,8 @@ h3 {
 
 /* Background Animation Keyframes */
 @keyframes orb-float-1 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(30%, -30%) scale(1);
     opacity: 0.25;
   }
@@ -289,7 +302,8 @@ h3 {
 }
 
 @keyframes orb-float-2 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(-30%, 30%) scale(1);
     opacity: 0.2;
   }
@@ -300,7 +314,8 @@ h3 {
 }
 
 @keyframes orb-pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 0.15;
   }

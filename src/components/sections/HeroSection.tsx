@@ -53,21 +53,15 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
           >
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
             <span className="text-sm text-foreground-muted">Asesoría IT Neutral</span>
-          </motion.div>
+          </div>
 
           {/* Main Heading */}
-          <motion.h1
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+          <h1
             className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight"
           >
             Comprá tecnología con{" "}
@@ -98,7 +92,7 @@ export default function HeroSection() {
               </motion.svg>
             </span>
             .
-          </motion.h1>
+          </h1>
 
           {/* Subtitle */}
           <motion.p

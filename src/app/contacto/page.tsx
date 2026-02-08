@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { HiMail, HiPhone, HiLocationMarker, HiCheckCircle, HiExclamationCircle } from "react-icons/hi";
+import { HiMail, HiPhone, HiLocationMarker, HiCheckCircle, HiExclamationCircle, HiChevronDown } from "react-icons/hi";
 import { FaLinkedinIn, FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 const contactInfo = [
@@ -32,6 +32,14 @@ const socialLinks = [
   { icon: FaWhatsapp, href: "https://wa.me/5493412709415", label: "WhatsApp" },
 ];
 
+const subjectOptions = [
+  "Asesoría en Compras IT",
+  "Consultoría Extendida",
+  "Quantum Education",
+  "Información de Precios",
+  "Otro"
+];
+
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -43,6 +51,7 @@ export default function ContactoPage() {
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData((prev) => ({
@@ -216,25 +225,40 @@ export default function ContactoPage() {
                     </div>
                   </div>
 
-                  <div>
+                  <div className={`relative ${isDropdownOpen ? "z-50" : ""}`}>
                     <label htmlFor="subject" className="block text-sm font-medium text-foreground-muted mb-2">
                       Asunto *
                     </label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      required
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-dark-800 border border-dark-600 rounded-lg text-foreground focus:outline-none focus:border-primary-500 transition-colors"
+                    <button
+                      type="button"
+                      onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                      className={`w-full px-4 py-3 bg-dark-800 border rounded-lg text-left flex items-center justify-between transition-colors ${
+                        isDropdownOpen ? "border-primary-500" : "border-dark-600 hover:border-dark-500"
+                      } ${formData.subject ? "text-foreground" : "text-foreground-muted"}`}
                     >
-                      <option value="">Selecciona un asunto</option>
-                      <option value="Asesoría en Compras IT">Asesoría en Compras IT</option>
-                      <option value="Consultoría Extendida">Consultoría Extendida</option>
-                      <option value="Quantum Education">Quantum Education</option>
-                      <option value="Información de Precios">Información de Precios</option>
-                      <option value="Otro">Otro</option>
-                    </select>
+                      <span>{formData.subject || "Selecciona un asunto"}</span>
+                      <HiChevronDown className={`w-5 h-5 transition-transform ${isDropdownOpen ? "rotate-180" : ""}`} />
+                    </button>
+
+                    {isDropdownOpen && (
+                      <div className="absolute z-50 w-full mt-2 bg-dark-800 border border-dark-600 rounded-lg shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-100">
+                        {subjectOptions.map((option) => (
+                          <button
+                            key={option}
+                            type="button"
+                            onClick={() => {
+                              setFormData((prev) => ({ ...prev, subject: option }));
+                              setIsDropdownOpen(false);
+                            }}
+                            className="w-full px-4 py-3 text-left text-foreground hover:bg-dark-700 transition-colors flex items-center justify-between"
+                          >
+                            {option}
+                            {formData.subject === option && <HiCheckCircle className="w-4 h-4 text-primary-500" />}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                    {/* Hidden input for validation if needed, though we check in handleSubmit */}
                   </div>
 
                   <div>
