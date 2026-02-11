@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /favicon.ico
+Allow: /icon-48x48.png
+Allow: /apple-touch-icon.png
+Allow: /icon-192x192.png
+Allow: /site.webmanifest
+
+Sitemap: https://quantarax.net/sitemap.xml
